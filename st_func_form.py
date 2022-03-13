@@ -50,7 +50,7 @@ with st.echo():
 with st.echo():
 
     def crunch_the_numbers(ticker: str, num_periods: int = 10) -> dict:
-        return {"ticker": ticker, "num_periods": num_periods, "value": 100.00}
+        return {"ticker": ticker, "value": num_periods * 100.00}
 
 
 "### So what does this signature thing do?"
