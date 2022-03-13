@@ -1,0 +1,12 @@
+[server]
+# Automatically rerun script when the file is modified on disk.
+# Default: false
+runOnSave = true
+
+# Max size, in megabytes, for files uploaded with the file_uploader.
+# Default: 200
+maxUploadSize = 400
+
+# Max size, in megabytes, of messages that can be sent via the WebSocket connection.
+# Default: 200
+maxMessageSize = 400
