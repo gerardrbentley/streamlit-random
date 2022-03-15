@@ -5,6 +5,9 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
 - [Streamlit Random Apps](#streamlit-random-apps)
   - [Darts API Playground](#darts-api-playground)
   - [Streamlit Full Stack 3 Ways](#streamlit-full-stack-3-ways)
+      - [Littlest](#littlest)
+      - [Postgres Version](#postgres-version)
+      - [Go Backend Version](#go-backend-version)
   - [Fidelity / Personal Stock Account Dashboard](#fidelity--personal-stock-account-dashboard)
   - [URL Scanner](#url-scanner)
   - [Peak Weather: NH 4,000 Footers](#peak-weather-nh-4000-footers)
@@ -25,16 +28,22 @@ See: [Github Repo](https://github.com/gerardrbentley/darts-playground)
 
 ## Streamlit Full Stack 3 Ways
 
-[![Littlest Veresion in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-fullstack/app.py)
-
-[![Postgres Version on VPS](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit-postgres.gerardbentley.com/)
-
-[![PG + Go Version on VPS](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://st-pg-go.gerardbentley.com/)
-
 Demo of Full Stack Streamlit Concept.
 Deployed with 3 increasingly complicated backends.
 
 See: [Github Repo](https://github.com/gerardrbentley/streamlit-fullstack)
+
+#### Littlest
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-fullstack/app.py)
+
+#### Postgres Version
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit-postgres.gerardbentley.com/)
+
+#### Go Backend Version
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://st-pg-go.gerardbentley.com/)
 
 ## Fidelity / Personal Stock Account Dashboard
 
@@ -68,7 +77,6 @@ See: [Github Repo](https://github.com/gerardrbentley/peak-weather)
 Using AWS Textract + S3 + Streamlit to provide interactive OCR Web App.
 
 See: [Github Repo](https://github.com/gerardrbentley/textract-streamlit-example)
-
 
 ## Darts Intro
 
