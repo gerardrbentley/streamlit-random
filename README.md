@@ -3,14 +3,14 @@
 Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
 
 - [Streamlit Random Apps](#streamlit-random-apps)
-  - [Darts API Playground](#darts-api-playground)
-  - [Streamlit Full Stack 3 Ways](#streamlit-full-stack-3-ways)
-      - [Littlest](#littlest)
-      - [Postgres Version](#postgres-version)
-      - [Go Backend Version](#go-backend-version)
-  - [Fidelity / Personal Stock Account Dashboard](#fidelity--personal-stock-account-dashboard)
-  - [URL Scanner](#url-scanner)
-  - [Peak Weather: NH 4,000 Footers](#peak-weather-nh-4000-footers)
+  - [:dart: Darts API Playground](#dart-darts-api-playground)
+  - [:computer: Streamlit Full Stack 3 Ways](#computer-streamlit-full-stack-3-ways)
+      - [:mouse: Littlest](#mouse-littlest)
+      - [:elephant: Postgres Version](#elephant-postgres-version)
+      - [:rat: Go Backend Version](#rat-go-backend-version)
+  - [:chart_with_upwards_trend: Fidelity / Personal Stock Account Dashboard](#chart_with_upwards_trend-fidelity--personal-stock-account-dashboard)
+  - [:link: URL Scanner](#link-url-scanner)
+  - [:mount_fuji: Peak Weather: NH 4,000 Footers](#mount_fuji-peak-weather-nh-4000-footers)
   - [AWS Textract Document Text Scan](#aws-textract-document-text-scan)
   - [Darts Intro](#darts-intro)
   - [Function to Streamlit Form](#function-to-streamlit-form)
@@ -18,7 +18,7 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
   - [Basic File Drop](#basic-file-drop)
   - [Gif Maker](#gif-maker)
 
-## Darts API Playground
+## :dart: Darts API Playground
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/darts-playground/main)
 
@@ -26,26 +26,28 @@ Explore the Datasets, Metrics, and Models of the Darts Time Series library.
 
 See: [Github Repo](https://github.com/gerardrbentley/darts-playground)
 
-## Streamlit Full Stack 3 Ways
+## :computer: Streamlit Full Stack 3 Ways
 
 Demo of Full Stack Streamlit Concept.
 Deployed with 3 increasingly complicated backends.
 
 See: [Github Repo](https://github.com/gerardrbentley/streamlit-fullstack)
 
-#### Littlest
+#### :mouse: Littlest
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-fullstack/app.py)
 
-#### Postgres Version
+
+#### :elephant: Postgres Version
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit-postgres.gerardbentley.com/)
 
-#### Go Backend Version
+#### :rat: Go Backend Version
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://st-pg-go.gerardbentley.com/)
 
-## Fidelity / Personal Stock Account Dashboard
+
+## :chart_with_upwards_trend: Fidelity / Personal Stock Account Dashboard
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/fidelity-account-overview/main/app.py)
 
@@ -53,7 +55,7 @@ Upload a CSV export from Fidelity investment account(s) and visualize profits an
 
 See: [Github Repo](https://github.com/gerardrbentley/fidelity-account-overview)
 
-## URL Scanner
+## :link: URL Scanner
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-url-scanner/main/streamlit_app/streamlit_app.py)
 
@@ -61,7 +63,7 @@ Using AWS Rekognition + Streamlit to provide interactive OCR URL Scanner / Text 
 
 See: [Github Repo](https://github.com/gerardrbentley/streamlit-url-scanner)
 
-## Peak Weather: NH 4,000 Footers
+## :mount_fuji: Peak Weather: NH 4,000 Footers
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/peak-weather/main/streamlit_app/streamlit_app.py)
 
