@@ -24,8 +24,8 @@ with redirect_stdout(io.StringIO()) as stdout_f, redirect_stderr(io.StringIO()) 
         stderr_f.write(bad_process.stderr)
         x = 1 / 0  # Throws Python Error
     except Exception as e:
-        traceback.print_exception(e)
-        traceback.print_exception(e, file=sys.stdout) # or sys.stdout
+        traceback.print_exc()
+        traceback.print_exc(file=sys.stdout) # or sys.stdout
 button = body.button('wtf')
 if button:
     # Outisde of context, doesn't display in streamlit
