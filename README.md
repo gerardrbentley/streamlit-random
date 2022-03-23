@@ -4,19 +4,20 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
 
 - [Streamlit Random Apps](#streamlit-random-apps)
   - [:dart: Darts API Playground](#dart-darts-api-playground)
+  - [:link: URL Scanner](#link-url-scanner)
   - [🥞 WSGI Stack vs Streamlit](#-wsgi-stack-vs-streamlit)
   - [:computer: Streamlit Full Stack 3 Ways](#computer-streamlit-full-stack-3-ways)
       - [:mouse: Littlest](#mouse-littlest)
       - [:elephant: Postgres Version](#elephant-postgres-version)
       - [:rat: Go Backend Version](#rat-go-backend-version)
   - [:chart_with_upwards_trend: Fidelity / Personal Stock Account Dashboard](#chart_with_upwards_trend-fidelity--personal-stock-account-dashboard)
-  - [:link: URL Scanner](#link-url-scanner)
   - [:mount_fuji: Peak Weather: NH 4,000 Footers](#mount_fuji-peak-weather-nh-4000-footers)
   - [🐙 Github Lines of Code Analyzer](#-github-lines-of-code-analyzer)
   - [:books: AWS Textract Document Text Scan](#books-aws-textract-document-text-scan)
   - [:moneybag: Roommate Spending Ledger Visualization](#moneybag-roommate-spending-ledger-visualization)
   - [Darts Intro](#darts-intro)
   - [Function to Streamlit Form](#function-to-streamlit-form)
+  - [PDF Merge and Split Utility](#pdf-merge-and-split-utility)
   - [Python Web Form Generator](#python-web-form-generator)
   - [Basic File Drop](#basic-file-drop)
   - [Gif Maker](#gif-maker)
@@ -29,6 +30,18 @@ Explore the Datasets, Metrics, and Models of the Darts Time Series library.
 
 See: [Github Repo](https://github.com/gerardrbentley/darts-playground)
 
+![demos/darts_playground.gif](demos/darts_playground.gif)
+
+## :link: URL Scanner
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-url-scanner/main/streamlit_app/streamlit_app.py)
+
+Using AWS Rekognition + Streamlit to provide interactive OCR URL Scanner / Text Extraction on real world images.
+
+See: [Github Repo](https://github.com/gerardrbentley/streamlit-url-scanner)
+
+![demos/rekog_demo.gif](demos/rekog_demo.gif)
+
 ## 🥞 WSGI Stack vs Streamlit
 
 Comparing an interactive web app built with `bottle` + `htmx` to the same idea built with `streamlit`.
@@ -36,6 +49,12 @@ Comparing an interactive web app built with `bottle` + `htmx` to the same idea b
 In folder `wsgi_comparison`
 
 ✍🏻 See: [Blog Post](https://tech.gerardbentley.com/streamlit/python/beginner/2022/03/23/bottle-htmx-streamlit.html)
+
+Left: ~50 lines of Python and HTML
+
+Right: ~15 lines of Python
+
+![demos/wsgi_compare_demo.gif](demos/wsgi_compare_demo.gif)
 
 ## :computer: Streamlit Full Stack 3 Ways
 
@@ -47,7 +66,6 @@ See: [Github Repo](https://github.com/gerardrbentley/streamlit-fullstack)
 #### :mouse: Littlest
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-fullstack/app.py)
-
 
 #### :elephant: Postgres Version
 
@@ -65,13 +83,7 @@ Upload a CSV export from Fidelity investment account(s) and visualize profits an
 
 See: [Github Repo](https://github.com/gerardrbentley/fidelity-account-overview)
 
-## :link: URL Scanner
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-url-scanner/main/streamlit_app/streamlit_app.py)
-
-Using AWS Rekognition + Streamlit to provide interactive OCR URL Scanner / Text Extraction on real world images.
-
-See: [Github Repo](https://github.com/gerardrbentley/streamlit-url-scanner)
+![demos/account_overview.gif](demos/account_overview.gif)
 
 ## :mount_fuji: Peak Weather: NH 4,000 Footers
 
@@ -87,6 +99,8 @@ See: [Github Repo](https://github.com/gerardrbentley/peak-weather)
 Shallow clone a repo then use unix + pandas tools to count how many lines of each file type are present
 
 `streamlit run github_code_analyze.py`
+
+![demos/github_lines_of_code.gif](demos/github_lines_of_code.gif)
 
 ## :books: AWS Textract Document Text Scan
 
@@ -113,6 +127,8 @@ See: [Github Repo](https://github.com/gerardrbentley/roommate-ledger)
 
 Exploring Time Series in: [Github Repo](https://github.com/gerardrbentley/timeseries-examples)
 
+![demos/darts_demo.gif](demos/darts_demo.gif)
+
 ## Function to Streamlit Form
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-random/main/st_func_form.py)
@@ -126,6 +142,8 @@ Even more rapid development!
 
 Take any CLI or other functional API and create an input form for them.
 Encourage developers to write accurate type hints ;)
+
+![demos/st_func_form.gif](demos/st_func_form.gif)
 
 ```py
 from inspect import Parameter
@@ -155,6 +173,16 @@ if data:
     output_col.json(crunch_the_numbers(**data.dict()))
 ```
 
+## PDF Merge and Split Utility
+
+Powered by `pypdf2` library, feel free to use reportlab or something else.
+
+Combines multiple PDFs into a single PDF or splits a single PDF into multiple PDFs.
+
+![demos/pdf_merge.gif](demos/pdf_merge.gif)
+
+![demos/pdf_split.gif](demos/pdf_split.gif)
+
 ## Python Web Form Generator
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/python-form-generator/main/app.py)
@@ -170,6 +198,8 @@ Not live, as there is no point.
 
 Make a web frontend that you can access from local network and drop any number of files to host computer!
 All in ~10 lines of code.
+
+![demos/filedropper.gif](demos/filedropper.gif)
 
 ```py
 import streamlit as st
