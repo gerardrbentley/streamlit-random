@@ -4,6 +4,7 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
 
 - [Streamlit Random Apps](#streamlit-random-apps)
   - [:dart: Darts API Playground](#dart-darts-api-playground)
+  - [🥞 WSGI Stack vs Streamlit](#-wsgi-stack-vs-streamlit)
   - [:computer: Streamlit Full Stack 3 Ways](#computer-streamlit-full-stack-3-ways)
       - [:mouse: Littlest](#mouse-littlest)
       - [:elephant: Postgres Version](#elephant-postgres-version)
@@ -11,7 +12,9 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
   - [:chart_with_upwards_trend: Fidelity / Personal Stock Account Dashboard](#chart_with_upwards_trend-fidelity--personal-stock-account-dashboard)
   - [:link: URL Scanner](#link-url-scanner)
   - [:mount_fuji: Peak Weather: NH 4,000 Footers](#mount_fuji-peak-weather-nh-4000-footers)
-  - [AWS Textract Document Text Scan](#aws-textract-document-text-scan)
+  - [🐙 Github Lines of Code Analyzer](#-github-lines-of-code-analyzer)
+  - [:books: AWS Textract Document Text Scan](#books-aws-textract-document-text-scan)
+  - [:moneybag: Roommate Spending Ledger Visualization](#moneybag-roommate-spending-ledger-visualization)
   - [Darts Intro](#darts-intro)
   - [Function to Streamlit Form](#function-to-streamlit-form)
   - [Python Web Form Generator](#python-web-form-generator)
@@ -25,6 +28,14 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
 Explore the Datasets, Metrics, and Models of the Darts Time Series library.
 
 See: [Github Repo](https://github.com/gerardrbentley/darts-playground)
+
+## 🥞 WSGI Stack vs Streamlit
+
+Comparing an interactive web app built with `bottle` + `htmx` to the same idea built with `streamlit`.
+
+In folder `wsgi_comparison`
+
+✍🏻 See: [Blog Post](https://tech.gerardbentley.com/streamlit/python/beginner/2022/03/23/bottle-htmx-streamlit.html)
 
 ## :computer: Streamlit Full Stack 3 Ways
 
@@ -45,7 +56,6 @@ See: [Github Repo](https://github.com/gerardrbentley/streamlit-fullstack)
 #### :rat: Go Backend Version
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://st-pg-go.gerardbentley.com/)
-
 
 ## :chart_with_upwards_trend: Fidelity / Personal Stock Account Dashboard
 
@@ -72,13 +82,28 @@ Feed a dashboard of weather for all 4,000 foot mountains in New Hampshire.
 
 See: [Github Repo](https://github.com/gerardrbentley/peak-weather)
 
-## AWS Textract Document Text Scan
+## 🐙 Github Lines of Code Analyzer
+
+Shallow clone a repo then use unix + pandas tools to count how many lines of each file type are present
+
+`streamlit run github_code_analyze.py`
+
+## :books: AWS Textract Document Text Scan
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/textract-streamlit-example/main/streamlit_app/streamlit_app.py)
 
 Using AWS Textract + S3 + Streamlit to provide interactive OCR Web App.
 
 See: [Github Repo](https://github.com/gerardrbentley/textract-streamlit-example)
+
+## :moneybag: Roommate Spending Ledger Visualization
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/roommate-ledger/main/app.py)
+
+Using Pandas + Plotly + SQLite to show a full stack use case of Time Series Data.
+Analyze spending over time per person (could be adapted to categories / tags / etc).
+
+See: [Github Repo](https://github.com/gerardrbentley/roommate-ledger)
 
 ## Darts Intro
 
