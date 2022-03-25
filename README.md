@@ -6,6 +6,7 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
   - [:dart: Darts API Playground](#dart-darts-api-playground)
   - [:link: URL Scanner](#link-url-scanner)
   - [🥞 WSGI Stack vs Streamlit](#-wsgi-stack-vs-streamlit)
+  - [🎸 Guitar Tuner](#-guitar-tuner)
   - [:computer: Streamlit Full Stack 3 Ways](#computer-streamlit-full-stack-3-ways)
       - [:mouse: Littlest](#mouse-littlest)
       - [:elephant: Postgres Version](#elephant-postgres-version)
@@ -55,6 +56,12 @@ Left: ~50 lines of Python and HTML
 Right: ~15 lines of Python
 
 ![demos/wsgi_compare_demo.gif](demos/wsgi_compare_demo.gif)
+
+## 🎸 Guitar Tuner
+
+Simple guitar tuner powered by `streamlit-webrtc`
+
+![demos/trim_guitar.gif](demos/trim_guitar.gif)
 
 ## :computer: Streamlit Full Stack 3 Ways
 
