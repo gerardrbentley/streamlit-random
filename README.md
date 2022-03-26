@@ -112,6 +112,8 @@ Currently:
 
 - `read_html`: Parse dataframes from html (url, upload, or raw copy+paste)
 
+![demos/pandas_html.gif](demos/pandas_html.gif)
+
 
 ## 🐙 Github Lines of Code Analyzer
 
