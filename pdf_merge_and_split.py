@@ -1,3 +1,4 @@
+import tempfile
 from datetime import datetime
 from io import BytesIO
 from pathlib import Path
@@ -8,11 +9,11 @@ from typing import Optional, List
 from streamlit_pydantic.types import FileContent
 from pydantic import BaseModel, Field
 from PyPDF2 import PdfFileWriter, PdfFileReader
+from PIL import Image
 
 # Make folder for storing user uploads
 destination_folder = Path('downloads')
 destination_folder.mkdir(exist_ok=True, parents=True)
-
 
 # Defines what options are in the form
 class PDFMergeRequest(BaseModel):
@@ -34,9 +35,24 @@ class PDFSplitRequest(BaseModel):
         description="PDF that needs to be split",
     )
 
+def stack_images(images):
+    """adapted from: https://note.nkmk.me/en/python-pillow-concat-images/"""
+    first_image = images[0]
+    output_image = Image.new('RGB', (first_image.width, sum((image.height for image in images))))
+    output_image.paste(first_image, (0, 0))
+    starting_y_value = first_image.height
+    for image in images[1:]:
+        output_image.paste(image, (0, starting_y_value))
+        starting_y_value += image.height
+    return output_image
+
+pdf_output = '.pdf'
+jpg_output = '.jpg'
+png_output = '.png'
+output_suffix = st.radio('Output File Type', [pdf_output, jpg_output, png_output], key='output_format')
 merge = 'Merge Multiple PDFs into One'
 split = 'Split One PDF into Multiple'
-view_choice = st.radio('PDF Function', (merge, split))
+view_choice = st.radio('PDF Function', (merge, split), key='view_choice')
 if view_choice == merge:
     # Get the data from the form, stop running if user hasn't submitted pdfs yet
     data = sp.pydantic_form(key="pdf_merge_form", model=PDFMergeRequest)
@@ -62,9 +78,25 @@ if view_choice == merge:
     output_pdf_path = destination_folder / f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}.pdf"
     with open(str(output_pdf_path), 'wb') as out:
         pdf_writer.write(out)
+    output_path = output_pdf_path
+    # Convert to stacked / merged image
+    if output_suffix in (png_output, jpg_output):
+        # requires poppler on mac? https://stackoverflow.com/questions/43064124/how-to-convert-multipage-pdf-to-list-of-image-objects-in-python
+        from pdf2image import convert_from_path
+
+        images = convert_from_path(output_pdf_path)
+        stacked_image = stack_images(images)
+        output_path = destination_folder / f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}{output_suffix}"
+        stacked_image.save(output_path)  # format inferred
 
     # Allow download
-    st.download_button('Download Merged PDF', output_pdf_path.read_bytes(), f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}.pdf", mime='application/pdf')
+    if output_suffix == pdf_output:
+        output_mime = 'application/pdf'
+    elif output_suffix == jpg_output:
+        output_mime = 'image/jpeg'
+    elif output_suffix == png_output:
+        output_mime = 'image/png'
+    st.download_button('Download Merged Document', output_path.read_bytes(), f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}{output_suffix}", mime=output_mime)
 elif view_choice == split:
     # Get the data from the form, stop running if user hasn't submitted pdf yet
     data = sp.pydantic_form(key="pdf_split_form", model=PDFSplitRequest)
@@ -85,15 +117,25 @@ elif view_choice == split:
     downloads = []
     for letter_start in range(0, pdf.numPages, data.pages_per_pdf):
         output = PdfFileWriter()
-        dest_path = input_pdf_path.with_name(f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}.pdf")
-        downloads.append(dest_path)
+        output_path = input_pdf_path.with_name(f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}.pdf")
         for letter_page in range(data.pages_per_pdf):
             output.addPage(pdf.getPage(letter_start + letter_page))
 
-        with open(dest_path, "wb") as f:
+        with open(output_path, "wb") as f:
             output.write(f)
 
-        st.success(f"Saved pdf {str(dest_path)} (original start page {letter_start + 1 } / {pdf.numPages})")
+        # Convert to stacked / merged image
+        if output_suffix in (png_output, jpg_output):
+            # Requires poppler on mac? https://stackoverflow.com/questions/43064124/how-to-convert-multipage-pdf-to-list-of-image-objects-in-python
+            from pdf2image import convert_from_path
+
+            images = convert_from_path(output_path)
+            stacked_image = stack_images(images)
+            output_path = destination_folder / f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}{output_suffix}"
+            stacked_image.save(output_path)  # format inferred
+
+        downloads.append(output_path)
+        st.success(f"Saved file {str(output_path)} (original start page {letter_start + 1 } / {pdf.numPages})")
 
     # Make zip file of all split pdfs
     zip_path = destination_folder / f"output_{datetime.now().strftime('%Y_%m_%d_%H_%M_%S_%f')}.zip"
