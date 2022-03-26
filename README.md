@@ -182,9 +182,11 @@ if data:
 
 ## PDF Merge and Split Utility
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-random/main/pdf_merge_and_split.py)
+
 Powered by `pypdf2` library, feel free to use reportlab or something else.
 
-JPG or PNG output optionally, powered by `pdf2image` (requires `brew insall poppler` or `conda install -c conda-forge poppler` on mac? [SO](https://stackoverflow.com/questions/43064124/how-to-convert-multipage-pdf-to-list-of-image-objects-in-python))
+JPG or PNG output optionally, powered by `pdf2image` (requires `brew insall poppler` / `apt install poppler-utils` or `conda install -c conda-forge poppler`? [github](https://github.com/Belval/pdf2image))
 
 Combines multiple PDFs into a single PDF or splits a single PDF into multiple PDFs.
 
