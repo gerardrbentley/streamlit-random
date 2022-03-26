@@ -1,3 +1,4 @@
+docstring-parser
 lxml
 pdf2image
 pypdf2

@@ -13,6 +13,7 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
       - [:rat: Go Backend Version](#rat-go-backend-version)
   - [:chart_with_upwards_trend: Fidelity / Personal Stock Account Dashboard](#chart_with_upwards_trend-fidelity--personal-stock-account-dashboard)
   - [:mount_fuji: Peak Weather: NH 4,000 Footers](#mount_fuji-peak-weather-nh-4000-footers)
+  - [🐼 Pandas Power!](#-pandas-power)
   - [🐙 Github Lines of Code Analyzer](#-github-lines-of-code-analyzer)
   - [:books: AWS Textract Document Text Scan](#books-aws-textract-document-text-scan)
   - [:moneybag: Roommate Spending Ledger Visualization](#moneybag-roommate-spending-ledger-visualization)
@@ -100,6 +101,17 @@ Use async http request library `httpx` to make 48 api calls roughly simultaneous
 Feed a dashboard of weather for all 4,000 foot mountains in New Hampshire.
 
 See: [Github Repo](https://github.com/gerardrbentley/peak-weather)
+
+## 🐼 Pandas Power!
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-random/main/pandas_power.py)
+
+Demoing useful functionalities of Pandas library in a web app.
+
+Currently:
+
+- `read_html`: Parse dataframes from html (url, upload, or raw copy+paste)
+
 
 ## 🐙 Github Lines of Code Analyzer
 
