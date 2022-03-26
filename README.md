@@ -184,6 +184,8 @@ if data:
 
 Powered by `pypdf2` library, feel free to use reportlab or something else.
 
+JPG or PNG output optionally, powered by `pdf2image` (requires `brew insall poppler` or `conda install -c conda-forge poppler` on mac? [SO](https://stackoverflow.com/questions/43064124/how-to-convert-multipage-pdf-to-list-of-image-objects-in-python))
+
 Combines multiple PDFs into a single PDF or splits a single PDF into multiple PDFs.
 
 ![demos/pdf_merge.gif](demos/pdf_merge.gif)

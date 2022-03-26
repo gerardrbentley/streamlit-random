@@ -1,3 +1,4 @@
+pdf2image
 pypdf2
 streamlit
 streamlit-pydantic
