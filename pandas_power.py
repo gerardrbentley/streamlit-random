@@ -1,11 +1,10 @@
 import ast
-from dataclasses import dataclass
 from datetime import datetime
 from enum import Enum
 from typing import Literal, Optional
 import streamlit as st
 import streamlit_pydantic as sp
-from pydantic import BaseModel, HttpUrl, Field, create_model
+from pydantic import BaseModel, Field
 from streamlit_pydantic.types import FileContent
 import requests
 
@@ -19,6 +18,8 @@ from docstring_parser import parse
 [pandas](https://pandas.pydata.org/docs/getting_started/index.html) is an extremely popular Python library (with ~18 million weekly downloads according to [snyk](https://snyk.io/advisor/python/pandas))
 
 It's fantastic for handling data, so what if we made some of it's powerful bits web interactive?
+
+Made with ❤️ from [Gar's Bar](https://tech.gerardbentley.com/)
 
 ## Dataframes from HTML
 

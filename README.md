@@ -50,7 +50,8 @@ Comparing an interactive web app built with `bottle` + `htmx` to the same idea b
 
 In folder `wsgi_comparison`
 
-✍🏻 See: [Blog Post](https://tech.gerardbentley.com/streamlit/python/beginner/2022/03/23/bottle-htmx-streamlit.html)
+🎥 Watch: [Youtube Breakdown](https://www.youtube.com/watch?v=4V3VACzOmrI&t=2s)
+✍🏻 Read: [Blog Post](https://tech.gerardbentley.com/streamlit/python/beginner/2022/03/23/bottle-htmx-streamlit.html)
 
 Left: ~50 lines of Python and HTML
 
