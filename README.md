@@ -13,7 +13,8 @@ Made with :heart: from [Gar's Bar](https://tech.gerardbentley.com/)
       - [:rat: Go Backend Version](#rat-go-backend-version)
   - [:chart_with_upwards_trend: Fidelity / Personal Stock Account Dashboard](#chart_with_upwards_trend-fidelity--personal-stock-account-dashboard)
   - [:mount_fuji: Peak Weather: NH 4,000 Footers](#mount_fuji-peak-weather-nh-4000-footers)
-  - [🐼 Pandas Power!](#-pandas-power)
+  - [🐼 Pandas Power](#-pandas-power)
+  - [✍🏻 Text Recognition Dataset Generator App](#-text-recognition-dataset-generator-app)
   - [🐙 Github Lines of Code Analyzer](#-github-lines-of-code-analyzer)
   - [:books: AWS Textract Document Text Scan](#books-aws-textract-document-text-scan)
   - [:moneybag: Roommate Spending Ledger Visualization](#moneybag-roommate-spending-ledger-visualization)
@@ -103,7 +104,7 @@ Feed a dashboard of weather for all 4,000 foot mountains in New Hampshire.
 
 See: [Github Repo](https://github.com/gerardrbentley/peak-weather)
 
-## 🐼 Pandas Power!
+## 🐼 Pandas Power
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-random/main/pandas_power.py)
 
@@ -115,6 +116,12 @@ Currently:
 
 ![demos/pandas_html.gif](demos/pandas_html.gif)
 
+## ✍🏻 Text Recognition Dataset Generator App
+
+Putting a frontend on TRDG CLI tool.
+Primary goal: creating classic videogame text screenshots with known ground truth labels
+
+![demos/text_generator.gif](demos/text_generator.gif)
 
 ## 🐙 Github Lines of Code Analyzer
 

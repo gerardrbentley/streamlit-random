@@ -1,0 +1,8 @@
+services:
+  streamlit-app:
+    ports:
+      - "8501:8501"
+    command: entrypoint.sh
+    build: ./
+    volumes:
+      - ./:/app
