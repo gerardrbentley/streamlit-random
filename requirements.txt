@@ -1,5 +1,6 @@
 docstring-parser
 lxml
+openpyxl
 pdf2image
 pypdf2
 streamlit

@@ -95,6 +95,15 @@ See: [Github Repo](https://github.com/gerardrbentley/fidelity-account-overview)
 
 ![demos/account_overview.gif](demos/account_overview.gif)
 
+## 💰 Personal Spending Dashboard
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/streamlit-random/main/personal_spending.py)
+
+Upload a CSV or excel with at least a date column and spending amount column to analyze maximum and average spending over different time periods.
+
+
+![demos/personal_spending.gif](demos/personal_spending.gif)
+
 ## :mount_fuji: Peak Weather: NH 4,000 Footers
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/gerardrbentley/peak-weather/main/streamlit_app/streamlit_app.py)
