@@ -2,6 +2,7 @@ docstring-parser
 lxml
 openpyxl
 pdf2image
+plotly
 pypdf2
 streamlit
 streamlit-pydantic
