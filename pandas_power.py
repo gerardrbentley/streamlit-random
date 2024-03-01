@@ -96,11 +96,11 @@ request_type = st.radio('From URL, Uploaded HTML, or Raw HTML?', options, help='
 
 sp.pydantic_form(key="form", model=options[request_type], group_optional_fields='expander')
 
-@st.experimental_memo
+@st.cache_data
 def convert_df(df: pd.DataFrame) -> bytes:
     return df.to_csv().encode('utf-8')
 
-@st.experimental_memo
+@st.cache_data
 def fetch_html_from_url(url: str) -> str:
     response = requests.get(url)
     return response.text

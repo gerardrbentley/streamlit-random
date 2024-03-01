@@ -43,7 +43,7 @@ else:
     use_sample = False
 
 
-@st.experimental_memo
+@st.cache_data
 def read_csv_or_excel(data, sep):
     try:
         raw_df = pd.read_csv(data, sep=sep)
@@ -128,7 +128,7 @@ with st.expander("Show Filtered Data"):
     st.dataframe(filtered_df)
 
 
-@st.experimental_memo
+@st.cache_data
 def get_timeseries_dfs(filtered_df, sampling_period, time_col):
     clean_df = filtered_df.copy()
     clean_df[time_col] = pd.to_datetime(clean_df[time_col])

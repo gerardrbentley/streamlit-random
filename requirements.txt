@@ -3,6 +3,7 @@ lxml
 openpyxl
 pdf2image
 plotly
+pydantic<2
 pypdf2
 streamlit
 streamlit-pydantic

@@ -5,7 +5,7 @@ import streamlit as st
 from pathlib import Path
 
 repos = Path('repos')
-@st.experimental_memo
+@st.cache_data
 def analyze_repo(repo):
     user, repo_name = repo.split('/')
     d = repos / repo_name
